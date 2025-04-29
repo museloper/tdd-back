@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.user.UserMapper">
+
+    <insert id="insertUser" parameterType="com.example.user.UserVO">
+        insert into users ( username
+                          , password )
+        values ( #{ username }
+               , #{ password } )
+    </insert>
+    
+    <select id="selectUserByUsername" parameterType="string" resultType="com.example.user.UserVO">
+        select user_seq
+             , username
+             , password
+          from users
+         where username = #{ username }
+    </select>
+
+
+</mapper>
