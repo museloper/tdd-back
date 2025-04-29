@@ -23,6 +23,7 @@ dependencies {
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3' // @Mapper
 
 	runtimeOnly 'com.h2database:h2' // H2 database for testing
+	runtimeOnly 'mysql:mysql-connector-java:8.0.33'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' // @SpringBootTest, @ActiveProfiles
 }
